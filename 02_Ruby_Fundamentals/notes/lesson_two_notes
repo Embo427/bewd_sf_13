@@ -1,0 +1,11 @@
+scalar objects represent a single value
+double quotes allow you to insert ruby variables into a string. aka interpolation
+
+variable.class - tells you the variable type
+
+variable = _ assigns variable to the "last thing"
+i.e. if I create Array.new without assigning it to anything, i can do:
+array = _ to grab that last array and assign it
+
+<< shovel is only designed to receive 1 object
+push can pass multiple items
