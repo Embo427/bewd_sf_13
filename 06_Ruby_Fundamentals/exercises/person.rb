@@ -14,6 +14,6 @@ attr_accessor :name, :age, :home_town
   def initialize(name, age, home_town)
     @name = name
     @age = age
-    @home = home
+    @home_town = home
   end
 end
