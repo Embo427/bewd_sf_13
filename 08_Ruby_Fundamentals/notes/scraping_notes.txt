@@ -1,0 +1,1 @@
+Turn off JavaScript in Chrome Settings > Advanced Settings > Privacy, Content Settings > JavaScript
