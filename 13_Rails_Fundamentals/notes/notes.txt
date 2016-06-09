@@ -1,0 +1,4 @@
+Different verbs can have the same path
+In the request, there is an action key, which will indicate what to do
+Typing in the URL is always a GET request, so you'd automatically go to the index
+  - even though different HTTP verbs/rails actions can have the same path, you'd usually default to GET
