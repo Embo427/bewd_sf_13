@@ -2,3 +2,61 @@ Different verbs can have the same path
 In the request, there is an action key, which will indicate what to do
 Typing in the URL is always a GET request, so you'd automatically go to the index
   - even though different HTTP verbs/rails actions can have the same path, you'd usually default to GET
+
+Create controllers:
+  'rails generate controller static_pages about test home'
+  handles the v and c
+  creates what it thinks you want your view pages to be (templates)
+  creates an actual controller with associated routes (that you will potentially change)
+  also creates a skeleton coffee script file
+    shorthand for javascript, compiles as javascript
+  and a file for css
+
+'rails server' turns on the server
+
+empty methods in the controller will automatically default to trying to find a view page
+
+'rails generate simple_form:install --bootstrap'
+
+Associations
+  E.g. Artists create songs, albums, etc
+    - songs belong to artists, albums belong to artists
+    - can use active record to create associations
+      - keywords
+      - specific types of migrations
+
+Rails knows that something with '_id', it likely will be for an association
+
+rails generate model, tell it the attributes
+  - creates a class file that allows you to create instances, instance methods, etc
+  - creates a table
+    - every table has a unique identifier
+      - id is created, auto-increments
+
+text data type is unlimited characters, string is limited (256 chars generally)
+
+'rails generate model artist name:string genre:string bio:text image:string active:boolean'
+  ***models are always singular***
+  asking rails to establish a class called artist with certain attributes, so that we can create instances
+  also asking it to set up a table, so that we can store instances in the database
+  id, created_at, updated_at are automatically added behind the scenes
+  schema can be changed in the migration file before running db:migrate
+
+'rake db:migrate' runs the migration
+'rails console' gets pry up and running
+can create instances of Artist
+  artist = Artist.new(attributes)
+artist.save loads it into database
+
+Artist.create - creates an instance of Artist and saves it to the database
+
+Artist.all - give me everything from the database
+artist.update(genre: "Classic Rock") - updates the attribute & saves it to the database
+Artist.where(genre: "Classic Rock") - queries the database for matching values
+Artist.find_by_name("Beyonce")
+Artist.find(1)
+
+
+'rails g controller artists index show edit new'
+ - delete and create don't get views
+ - first thing to do when you create a controller is clean up your routes
