@@ -15,4 +15,5 @@
 #added by annotate gem^^^
 
 class Artist < ActiveRecord::Base
+  has_many :songs
 end
