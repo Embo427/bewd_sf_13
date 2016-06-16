@@ -1,17 +1,17 @@
 # == Schema Information
 #
-# Table name: artists
+# Table name: songs
 #
 #  id         :integer          not null, primary key
-#  name       :string
+#  title      :string
+#  length     :string
 #  genre      :string
-#  bio        :text
-#  image      :string
-#  active     :boolean
+#  artist_id  :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  lyric_url  :string
 #
 
-class Artist < ActiveRecord::Base
-  has_many :songs
+class Song < ActiveRecord::Base
+  belongs_to :artist
 end
