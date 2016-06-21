@@ -1,0 +1,8 @@
+brew is a collection of underlying libraries, open source
+helps with whatever ruby, rvm, bundler, etc need to function
+
+rvm, ruby version manager
+can install multiple versions of ruby
+when you install libraries/gems, it automatically associates specific versions of ruby with the right versions of the gem
+
+rvm list shows you what versions you actually have available

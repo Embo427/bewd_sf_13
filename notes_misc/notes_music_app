@@ -1,0 +1,45 @@
+Models
+
+artist
+  associations:
+    has_many :songs
+
+  attributes:
+    :name
+    :image_url
+    :bio
+
+song
+  associations:
+    belongs_to :artist
+
+  attributes:
+    :title
+    :track_length
+    :artist_id
+
+review
+  associations:
+            :reviewable (polymorphic)
+
+  attributes:
+    :reviewable
+    :content
+    :rating
+
+?
+_
+:genre
+:birthday
+:album
+:publication
+:user
+
+
+Controllers
+
+
+
+Notes
+
+Need to add artists 

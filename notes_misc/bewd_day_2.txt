@@ -1,0 +1,22 @@
+Rails is a framework for standardization
+Ruby is the language that rails is written in
+
+= is 'assignment'
+== is 'equivalent'
+=== is 'identical'
+
+ryan = superman
+bob = superman
+ryan == superman > true
+bob == superman > true
+ryan == bob > true
+ryan.object_id ==== bob.object_id > false
+
+Homework: How does Atom set Ruby files to two tabs?
+
+for divisible, you need a modulo
+modulo returns the remainder
+  if the remainder is 0, it is divisible by 0
+
+binding.pry lets you step into code
+next gives you the next step in the iterator

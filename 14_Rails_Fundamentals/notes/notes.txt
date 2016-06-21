@@ -1,0 +1,5 @@
+two sides to every association - belongs and has
+create a migration to add something
+
+to create JOIN tables, must alphabetize the models that you're joining
+JOIN tables are made up of foreign keys, which are the primary keys in other tables

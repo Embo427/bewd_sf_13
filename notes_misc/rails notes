@@ -1,0 +1,91 @@
+Route
+A route is a URL - i.e. sign-in page, account page, etc.
+  - addresses
+  - where you go to gain access to some sort of interface
+  - for an API, it's just access to endpoints like JSON data
+  - the route is the part after the /
+The routing layer is the traffic controller
+  - i.e. you have a request, you need me to go to the "hello" URL
+  - points you to the correct controller, and the correct action w/in the controller
+Controls HTTP traffic
+    - get requests
+    - posts
+    - patch requests
+    - etc
+
+Controller
+  - talks to everything
+  - interacts with everything that makes the operation work
+  - leanest part of the app
+    - no logic
+
+  CRUD - connected to the HTTP request
+  Create, Read, Update, Delete - correspond to HTTP requests
+
+Model
+  - where all of your methods should be
+  - all of your business logic housed here
+  - controlled by active record
+  - doing things like validations
+    - match an email address to a pattern
+    - check the input to see if what you expect actually exists
+    - create scopes - queries for specific types of database requests
+  - can save, or create instances
+
+View
+  - you get HTML CSS and JavaScript ready view layer
+  - create forms, create an interface that people can use to interact
+  - no logic should go in here
+    - should write helpers for logic
+
+Scaffolding
+  - good way to learn what rails starts out as
+  - it's a lot of magic, it's very heavy, makes apps slow
+  - won't help you connect to an API or validate anything or make it look nice
+  - tells rails to create everything - model, view, controller, etc
+
+Bundle
+  - allows you to integrate new gems (aka libraries) that you've put inside of your gemfile,
+    and/or updates existing gems with new versions
+  - must run this to add new gems to the gemfile
+
+Server
+  - will run on a specific port
+    - ours is 3000
+
+Resources
+  - Rails is creating a path for every single HTTP verb - GET requests, POST create, PATCH update, etc
+
+Folders
+  App
+    - contains mvc
+  Config
+    - contains routes
+  DB
+    - contains migrations
+      - code that creates tables in your database
+  Gemfile
+
+ERB
+  - embedded Ruby, ruby can be embedded within the HTML
+
+YAML
+  - text that you need to make an initializer work
+
+ActiveRecord::Migration
+  - module
+  - responsible for transforming class attributes and creating a table with fields
+    that are associated with those attributes
+  - every time we save/create/delete a book. want to make sure there's a data table that holds that info
+  - auto-adds created_at and updated_at timestamps
+  - Migration pending - you've set up a table but haven't run the command to actually create it
+
+Gemfile
+  - add new libraries
+  - bolstering debugging capabilities with more debugging libraries
+  - must run bundle to add new gems
+
+Routes
+  - Set landing page - root "controller#action"
+
+<%= means show, <% means don't show
