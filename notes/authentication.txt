@@ -1,0 +1,14 @@
+authentication
+  - who you are
+  - validating w/ username/password
+  - tracking identity in a session
+      - fingerprint on what you're doing through your browser
+  - keeping between visits w/ cookie
+  - protects the site w/ security encryption
+
+storing passwords
+  - passwords should never be stored in "plain text"
+  - always use "hashing encryption" on passwords before storing them in database
+    - done automatically with auth gems
+
+authorization - what you have access to
